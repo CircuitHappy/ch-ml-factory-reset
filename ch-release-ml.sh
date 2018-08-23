@@ -5,7 +5,9 @@
 sh /usr/bin/ch-set-hostname.sh
 
 # Disable SSH
-/etc/init.d/ssh stop
-update-rc.d ssh disable
+systemctl stop ssh
+systemctl disable ssh
 
 echo "Ready for Release!"
+
+reboot
